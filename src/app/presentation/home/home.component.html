@@ -1,1 +1,19 @@
-<p>home works!</p>
+<main class="flex flex-col justify-center items-center h-screen">
+  <section class="flex justify-center">
+    <figure>
+      <img class="rounded-lg" [src]="imgUrl" alt="img profile" />
+    </figure>
+  </section>
+  <section class="flex justify-center">
+    <button type="button" (click)="navigateTo('courses')"    class="bg-cyan-600 p-1 m-1 rounded font-bold transition-all duration-200 hover:bg-slate-200">Courses</button>
+    <button type="button" (click)="navigateTo('experience')" class="bg-cyan-600 p-1 m-1 rounded font-bold transition-all duration-200 hover:bg-slate-200">Experience</button>
+    <button type="button" (click)="navigateTo('stack')"      class="bg-cyan-600 p-1 m-1 rounded font-bold transition-all duration-200 hover:bg-slate-200">Stack</button>
+    <button type="button" (click)="navigateTo('contact')"    class="bg-cyan-600 p-1 m-1 rounded font-bold transition-all duration-200 hover:bg-slate-200">Contact</button>
+    <button type="button" (click)="navigateTo('about')"      class="bg-cyan-600 p-1 m-1 rounded font-bold transition-all duration-200 hover:bg-slate-200">About</button>
+    <button type="button" (click)="navigateTo('projects')"   class="bg-cyan-600 p-1 m-1 rounded font-bold transition-all duration-200 hover:bg-slate-200">Projects</button>
+    <button type="button" (click)="navigateTo('code')"       class="bg-cyan-600 p-1 m-1 rounded font-bold transition-all duration-200 hover:bg-slate-200">Code</button>
+  </section>
+  <section class="flex justify-center p-4">
+    <h1 class="text-slate-400">Rubian Ruiz</h1>
+  </section>
+</main>
