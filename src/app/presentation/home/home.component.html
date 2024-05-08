@@ -1,10 +1,10 @@
 <main class="flex flex-col justify-center items-center h-screen">
-  <section class="flex justify-center">
-    <figure>
-      <img class="rounded-lg" [src]="imgUrl" alt="img profile" />
+  <section class="flex justify-center mb-4 max-w-screen-sm">
+    <figure class="max-w-">
+      <img class="rounded-lg w-full max-w-md" [src]="imgUrl" alt="img profile" />
     </figure>
   </section>
-  <section class="flex justify-center">
+  <section class="md:grid md:grid-cols-3 grid grid-cols-2">
     <button type="button" (click)="navigateTo('courses')"    class="bg-cyan-600 p-1 m-1 rounded font-bold transition-all duration-200 hover:bg-slate-200">Courses</button>
     <button type="button" (click)="navigateTo('experience')" class="bg-cyan-600 p-1 m-1 rounded font-bold transition-all duration-200 hover:bg-slate-200">Experience</button>
     <button type="button" (click)="navigateTo('stack')"      class="bg-cyan-600 p-1 m-1 rounded font-bold transition-all duration-200 hover:bg-slate-200">Stack</button>
