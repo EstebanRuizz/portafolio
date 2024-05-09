@@ -1,4 +1,4 @@
-name: Angular Build and Deploy
+name: Build and Deploy
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build:
+  build_and_deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -17,13 +17,9 @@ jobs:
         with:
           node-version: 20
 
-      - name: Build Angular app to prod
+      - name: Build Angular app to prod and deploy to GitHub Pages
         working-directory: portfolio
-        run: npm install && npm run build:prod
-
-      - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: dist/personal-portfolio/browser
-          branch: main
-          token: ${{ secrets.GH_TOKEN_PORTFOLIO }}
+        run: |
+          npm install &&
+          npm run build:prod &&
+          npx gh-pages -d dist/personal-portfolio/browser -b main -t ${{ secrets.GH_TOKEN_PORTFOLIO }}
